@@ -1,4 +1,11 @@
-﻿function Filter-WeekdayItems {
+﻿<#
+    .Description
+    Filters items by weekday, and removes if last written to on a weekday
+
+
+    https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_comment_based_help?view=powershell-6
+#>
+function Filter-WeekdayItems {
     [CmdletBinding(SupportsShouldProcess=$True)]
     param (
         [Parameter(ValueFromPipeline=$True)]
