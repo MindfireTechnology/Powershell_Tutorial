@@ -1,6 +1,11 @@
 ﻿param (
-    $FileName="README.md",
-    $FilePath="."
+    [Parameter(HelpMessage="Name of the file to be created")]
+    [Alias("n")]
+    [string]$FileName="README.md",
+
+    [Parameter(HelpMessage="Path to the location of the file", Mandatory=$True)]
+    [Alias("p")]
+    [string]$FilePath
 )
 
 $path = Join-Path $FilePath -ChildPath $FileName
