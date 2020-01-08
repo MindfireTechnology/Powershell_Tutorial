@@ -1,6 +1,9 @@
-﻿$fileName = "README.md"
-$filePath = "."
-$path = "$filePath\$fileName"
+﻿param (
+    $FileName,
+    $FilePath
+)
+
+$path = Join-Path $FilePath -ChildPath $FileName
 
 New-Item $path -Force
 
